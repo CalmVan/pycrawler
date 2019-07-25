@@ -507,6 +507,7 @@ soup = BeautifulSoup(html,'lxml')
 # for a in soup.find_all(attrs={'class': 'name'}):
 #     print(a.string)
 for b in soup.find_all(attrs={'class': 'image-link'}):
-    print(b.find_all(class_='board-img'))
-    for c in b.find(class_='board-img'):
-        print()
+    #print(b)
+    for c in b.find_all(class_='board-img'):
+        print(c['data-src'])
+
