@@ -9,7 +9,7 @@
 # doc = pq(html)
 # items = doc('.explore-tab .feed-item').items()
 # for item in items:
-#     question = item.find('h2').text()
+#     question  = item.find('h2').text()
 #     author = item.find('.author-link-line').text()
 #     answer = pq(item.find('.content').html()).text()
     # file = open('explore.txt', 'a', encoding='utf-8')
@@ -113,15 +113,15 @@
 #     writer.writerow(['id', 'name', 'age'])
 #     writer.writerows([['10001', 'Mike', 20], ['10002', 'Bob', 22], ['10003', 'Jordan', 21]])
 
-# import csv
-#
-# with open('data.csv', 'w') as csvfile:
-#     fieldnames = ['id', 'name', 'age']
-#     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-#     writer.writeheader()
-#     writer.writerow({'id': '10001', 'name': 'Mike', 'age': 20})
-#     writer.writerow({'id': '10002', 'name': 'Bob', 'age': 22})
-#     writer.writerow({'id': '10003', 'name': 'Jordan', 'age': 21})
+import csv
+
+with open('data.csv', 'w') as csvfile:
+    fieldnames = ['id', 'name', 'age']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow({'id': '10001', 'name': 'Mike', 'age': 20})
+    writer.writerow({'id': '10002', 'name': 'Bob', 'age': 22})
+    writer.writerow({'id': '10003', 'name': 'Jordan', 'age': 21})
 
 # import csv
 #
@@ -146,7 +146,7 @@
 #     for row in reader:
 #         print(row)
 
-import pandas  as pd
+import pandas as pd
 
 df = pd.read_csv('data.csv')
 print(df)
